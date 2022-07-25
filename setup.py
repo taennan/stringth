@@ -4,6 +4,7 @@ from pathlib import Path
 setup(
     name="stringth",
     version="0.0.1",
+    license="Apache-2.0",
     author="taennan",
     author_email="taennan@scoobyapps.com",
     description="Converts to and from nth strings and integers",
@@ -14,10 +15,5 @@ setup(
     classifiers=[
         "Programming Language :: Python :: 3",
         "Operating System :: OS Independant",
-    ],
-    entry_points={
-        "console_scripts": [
-            "stringth=stringth.__main__:main"
-        ]
-    }
+    ]
 )
