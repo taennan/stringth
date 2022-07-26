@@ -7,3 +7,5 @@ __pycache__
 *.pyc
 
 stringth.egg-info
+
+NOTES.md
