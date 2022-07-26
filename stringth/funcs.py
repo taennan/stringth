@@ -19,21 +19,23 @@ def to_nth_str(i):
     Basic Usage:
 
     >>>
-    >>> to_nth_str(1)  # -> "1st"
-    >>> to_nth_str(2)  # -> "2nd"
-    >>>
-    >>> # Not sure what context this will be useful in
-    >>> from_nth_str(-66) # -> "-66th"
+    >>> to_nth_str(21)  # -> "21st"
+    >>> to_nth_str(2)   # -> "2nd"
+    >>> to_nth_str(-11) # -> "-11th"
     >>>
     """
-    if i == 1:
-        return "1st"
-    elif i == 2:
-        return "2nd"
-    elif i == 3:
-        return "3rd"
-    else:
+    if i in [11, 12, 13]:
         return f"{i}th"
+    else:
+        last = int(str(i)[-1])
+        if last == 1:
+            return f"{i}st"
+        elif last == 2:
+            return f"{i}nd"
+        elif last == 3:
+            return f"{i}rd"
+        else:
+            return f"{i}th"
 
 def from_nth_str(s, ignore_case=True):
     """
@@ -61,11 +63,9 @@ def from_nth_str(s, ignore_case=True):
     Basic Usage:
 
     >>>
-    >>> from_nth_str("1st")  # -> 1
-    >>> from_nth_str("2nd")  # -> 2
-    >>>
-    >>> # Not sure what context this will be useful in
-    >>> from_nth_str("-5th") # -> -5
+    >>> from_nth_str("1st")    # -> 1
+    >>> from_nth_str("2nd")    # -> 2
+    >>> from_nth_str("-103rd") # -> -103
     >>>
 
     On Failure:
