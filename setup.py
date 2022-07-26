@@ -13,7 +13,10 @@ setup(
     packages=find_packages(),
     keywords=["string", "str", "nth"],
     classifiers=[
+        "Topic :: Utilities",
+        "Intended Audience :: Developers",
+        "Natural Language :: English",
         "Programming Language :: Python :: 3",
-        "Operating System :: OS Independant",
+        "Operating System :: OS Independent",
     ]
 )
